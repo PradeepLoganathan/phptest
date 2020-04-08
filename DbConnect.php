@@ -16,11 +16,11 @@ class DbConnect
             $stmt = $conn->prepare("INSERT INTO students (name, address) 
             VALUES (:name, :address)");
 
-            $studentname = 'abhinav';
-            $studentaddress = 'someaddress';   
+            $studentname = $student->get_name();
+            $studentaddress = $student->get_address();   
             
             $stmt->bindParam(':name', $studentname);
-            $stmt->bindParam(':addresss', $studentaddress);
+            $stmt->bindParam(':address', $studentaddress);
 
            
 
