@@ -1,9 +1,14 @@
 <?php 
 include 'Student.php';
 include 'Students.php';
+include 'DbConnect.php';
+
 
 $abhi = new Student;
-$abhi->set_name('Abhinav');
+$abhi->set_name('Abhinav2');
+
+$db = new DbConnect;
+$db->AddStudent($abhi);
 
 $cait = new Student;
 $cait->set_name('Caitlin');
@@ -18,5 +23,5 @@ $StudentsDb->AddStudent($abhi);
 $StudentsDb->AddStudent($cait);
 $StudentsDb->AddStudent($dan);
 
-$StudentsDb->ListStudents();
+//$StudentsDb->ListStudents();
 ?>

@@ -2,6 +2,7 @@
 class Student
 {
     public $name;
+    public $address;
 
     function __construct()
     {        
@@ -17,6 +18,17 @@ class Student
     {
         echo $this->name;
         return $this->name;
+    }
+
+    function set_address($address)
+    {
+        $this->address = $address;
+    }
+
+    function get_address()
+    {
+        echo $this->address;
+        return $this->address;
     }
 }
 
